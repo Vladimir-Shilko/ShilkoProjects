@@ -1,6 +1,6 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Button, Section, Input, Box } from "@quarkly/widgets";
+import { Theme, Link, Text, Box, Button, Image, Section, Input } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml } from "@quarkly/components";
@@ -14,16 +14,80 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Button>
-			Button
-		</Button>
+		<Section>
+			<Box
+				display="flex"
+				padding="12px 0"
+				justify-content="space-between"
+				align-items="center"
+				flex-direction="row"
+				md-flex-direction="column"
+			>
+				<Text margin="0" md-margin="0px 0 20px 0" text-align="left" font="--lead">
+					NoteDoc
+				</Text>
+				<Box width="300px" height="100px" position="relative" left="300px">
+					<Text>
+						шилко владимир иванович
+					</Text>
+					<Text>
+						ID:
+					</Text>
+				</Box>
+				<Button position="relative" left="150px">
+					войти
+				</Button>
+				<Image width="100px" height="100px" position="relative" left="0px" />
+			</Box>
+		</Section>
 		<Box>
-			<Section />
-			<Input />
 			<Button>
-				Button
+				входящие
 			</Button>
-			<Input />
+			<Button>
+				исходящие
+			</Button>
+			<Button>
+				ожидают подтверждения
+			</Button>
+			<Button>
+				просроченные
+			</Button>
+			<Button>
+				выполненные
+			</Button>
+		</Box>
+		<Box />
+		<Box height="100px">
+			<Input height="95px" position="relative" bottom="20px" type="text" />
+			<Button height="95px" position="relative" bottom="20px">
+				скачать
+			</Button>
+			<Button
+				position="relative"
+				bottom="20px"
+				height="95px"
+				display="inline"
+				width="350px"
+			>
+				<Input type="file" width="230px" />
+				загрузить
+			</Button>
+			<Button width="260px" overflow-x="visible" display="inline-block">
+				<Input type="date" display="block" />
+				<Input type="date" position="relative" right="36px" left="-4px" />
+				отправить
+			</Button>
+			<Input height="95px" position="relative" bottom="20px" />
+			<Button
+				width="100px"
+				height="95px"
+				position="relative"
+				bottom="20px"
+				background="#cc0003"
+			>
+				удалить
+			</Button>
 		</Box>
 		<Link
 			font={"--capture"}
